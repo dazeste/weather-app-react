@@ -16,13 +16,23 @@ function App() {
             <p>London</p>
           </div>
           <div className="temp">
-            <h1> 10℃</h1>
+            <h1>10℃</h1>
           </div>
           <div className="description">
             <p>Clouds</p>
           </div>
         </div>
-        <div className="bottom"></div>
+        <div className="bottom">
+          <div className="feels">
+            <p>10℃</p>
+          </div>
+          <div className="humidity">
+          <p>75%</p>
+          </div>
+          <div className="wind">
+          <p>12 MPH</p>
+          </div>
+        </div>
 
       </div>
      
