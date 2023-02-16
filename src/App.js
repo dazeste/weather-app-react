@@ -11,7 +11,17 @@ function App() {
   return (
     <div className="app">
       <div className="container">
-        <div className="top"></div>
+        <div className="top">
+          <div className="location">
+            <p>London</p>
+          </div>
+          <div className="temp">
+            <h1> 10℃</h1>
+          </div>
+          <div className="description">
+            <p>Clouds</p>
+          </div>
+        </div>
         <div className="bottom"></div>
 
       </div>
