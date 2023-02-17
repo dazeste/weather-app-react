@@ -36,6 +36,16 @@ p{
   left: 0;
   z-index: -1;
 }
+.app .search{
+  text-align: center;
+  padding: 1rem;
+}
+/* .app input{
+  padding: .7rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+} */
 .container{
   max-width: 700px;
   height: 700px;
@@ -50,5 +60,26 @@ p{
 
 .app .top{
   width: 100%;
-  margin: 1rem auto;;
+  margin: 1rem auto;
 }
+.app .description{
+  position: relative;
+  right: -90%;
+  transform-origin: 0 0;
+  transform: rotate(269deg);
+}
+
+.app .bottom{
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.bold{
+  font-weight: 700;
+}
+
