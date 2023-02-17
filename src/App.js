@@ -3,6 +3,10 @@ import axios from 'axios';
 
 
 function App() {
+
+
+
+
  
   const url="https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=312eff72f790313dee856b028b91820d";
   // const url="https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=312eff72f790313dee856b028b91820d";
@@ -26,7 +30,7 @@ function App() {
             <p>London</p>
           </div>
           <div className="temp">
-            <h1>10&#8451;</h1>
+            <h1>10°C</h1>
           </div>
           <div className="description">
             <p>Clouds</p>
@@ -34,7 +38,7 @@ function App() {
         </div>
         <div className="bottom">
           <div className="feels">
-            <p className="bold">10&#8451;</p>
+            <p className="bold">10°C</p>
             <p>Feels like</p>
           </div>
           <div className="humidity">
