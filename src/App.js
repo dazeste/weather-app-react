@@ -6,38 +6,37 @@ function App() {
   const [data, setData] = useState({});
   const [location, setLocation] = useState('');
 
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=312eff72f790313dee856b028b91820d`
 
 
- 
-  const url="https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=312eff72f790313dee856b028b91820d";
-  // const url="https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=312eff72f790313dee856b028b91820d";
-
-
-  const searchLocation = () => {
-    axios.get(url).then((response) => {
-      setData(response.data)
-      console.log(response.data)
-    })
-
+  const searchLocation = (event) => {
+    if (event.key === "Enter"){
+      axios.get(url).then((response) => {
+        setData(response.data)
+        console.log(response.data)
+      })
+      setLocation('')
+    }
   }
 
   return (
     <div className="app">
       <div className="search">
         <input 
-        value=""
-        onChange =""
+        value={location}
+        onChange ={event => setLocation(event.target.value)}
         placeholder="Enter Location"
-        onKeyPress=""
+        onKeyPress={searchLocation}
         type="text" />
       </div>
       <div className="container">
         <div className="top">
           <div className="location">
-            <p>London</p>
+            <p>{data.name}</p>
           </div>
           <div className="temp">
-            <h1>10°C</h1>
+            {data.main ? <h1>{data.main.temp}</h1> : null}
+           
           </div>
           <div className="description">
             <p>Clouds</p>
